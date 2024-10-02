@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <link rel="stylesheet" href="{% static 'library/return.css' %}"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <div class="form-container">
+        <h2>Return Book</h2>
+        
+        {% if messages %}
+            <div class="message">
+                {% for message in messages %}
+                    {{ message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label>First Name:</label>
+                <input type="text" name="first_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Last Name:</label>
+                <input type="text" name="last_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Book Name:</label>
+                <input type="text" name="book_name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Author:</label>
+                <input type="text" name="author" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Return Date:</label>
+                <input type="date" name="return_date" class="form-control" required>
+            </div>
+            <input type="submit" value="Return Book" class="btn-submit">
+        </form>
+    </div>
+</body>
+</html>

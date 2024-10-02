@@ -1,0 +1,24 @@
+<!-- <h1>Welcome to the Library Management System</h1>
+<img src="{{ MEDIA_URL }}library/images/lib2.jpg/images/lib2.jpg" alt="Library Image" class="welcome-image">
+<nav style="position: fixed; top: 10px; right: 10px;">
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'issue_book' %}">Issue Book</a> |
+    <a href="{% url 'return_book' %}">Return Book</a>
+</nav>  -->
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="{% static 'library/home.css' %}">
+</head>
+
+<h1>Welcome to the Library Management System</h1>
+
+<!-- Adding the image below the heading, which will be styled by the external CSS -->
+<img src="{% static 'images/lib2.jpg' %}" alt="Library Image" class="welcome-image">
+
+<nav style="position: fixed; top: 10px; right: 10px;">
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'issue_book' %}">Issue Book</a> |
+    <a href="{% url 'return_book' %}">Return Book</a>
+</nav>
+
