@@ -1,4 +1,4 @@
-# Library-Management-System
+# Library-Management-System Using Django With MYSQL Database
 
 Login page
 ![adminpage](https://github.com/user-attachments/assets/0bdf6db8-7671-4319-8eb9-eefea4e635ed)
